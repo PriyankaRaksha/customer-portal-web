@@ -1,0 +1,4 @@
+# Virat (Devops)
+fastapi
+uvicorn
+pytest
