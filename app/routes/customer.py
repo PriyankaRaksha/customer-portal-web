@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from app.services.customer_service import add_customer
 
 router = APIRouter()
 
@@ -15,3 +16,9 @@ def create_customer(name:str,email:str):
     customers.append(customer)
 
     return customer
+
+@router.post("/customers/list")
+
+def create_customer(name:str,email:str):
+
+    return add_customer(name,email)
