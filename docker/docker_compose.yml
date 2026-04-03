@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+
+  portal-api:
+
+    build: .
+
+    ports:
+      - "8002:8002"
