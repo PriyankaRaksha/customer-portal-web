@@ -1,0 +1,3 @@
+services:
+  portal:
+    image: portal:v2
