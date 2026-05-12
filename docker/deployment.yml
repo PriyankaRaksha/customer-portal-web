@@ -1,0 +1,7 @@
+services:
+  portal:
+    image: portal:v2
+
+  customer-portal:
+    image: customer-portal:v2
+    replicas: 2
