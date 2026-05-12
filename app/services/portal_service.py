@@ -4,3 +4,9 @@ def get_dashboard(user_id):
         "orders": db.get_orders(user_id),
         "notifications": db.get_notifications(user_id)
     }
+
+def fetch_recent_orders(user_id):
+    return db.query(
+        "SELECT * FROM orders WHERE user_id=%s LIMIT 5",
+        user_id
+    )
