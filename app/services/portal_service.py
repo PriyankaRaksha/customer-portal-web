@@ -10,3 +10,12 @@ def fetch_recent_orders(user_id):
         "SELECT * FROM orders WHERE user_id=%s LIMIT 5",
         user_id
     )
+
+def fetch_notifications(user_id):
+    return db.query(
+        "SELECT * FROM notifications WHERE user_id=%s",
+        user_id
+    )
+
+def validate_orders(data):
+    return data if data else []
