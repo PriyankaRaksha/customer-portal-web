@@ -16,3 +16,6 @@ def fetch_notifications(user_id):
         "SELECT * FROM notifications WHERE user_id=%s",
         user_id
     )
+
+def validate_orders(data):
+    return data if data else []
