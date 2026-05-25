@@ -25,3 +25,9 @@ def fetch_support_tickets(user_id):
         "SELECT * FROM support_tickets WHERE user_id=%s",
         user_id
     )
+
+def fetch_payment_history(user_id):
+    return db.query(
+        "SELECT * FROM payments WHERE user_id=%s",
+        user_id
+    )
