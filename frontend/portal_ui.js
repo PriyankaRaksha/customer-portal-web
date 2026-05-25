@@ -10,3 +10,8 @@ function renderDashboard(data) {
         <h2>${data.user.name}</h2>
     `;
 }
+
+function renderPayments(data) {
+    document.getElementById("payments").innerHTML =
+        `<p>Total Payments: ${data.length}</p>`;
+}
