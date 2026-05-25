@@ -19,3 +19,9 @@ def fetch_notifications(user_id):
 
 def validate_orders(data):
     return data if data else []
+
+def fetch_support_tickets(user_id):
+    return db.query(
+        "SELECT * FROM support_tickets WHERE user_id=%s",
+        user_id
+    )
