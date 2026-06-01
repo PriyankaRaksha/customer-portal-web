@@ -31,3 +31,8 @@ def fetch_payment_history(user_id):
         "SELECT * FROM payments WHERE user_id=%s",
         user_id
     )
+def fetch_user_profile(user_id):
+    return db.query(
+        "SELECT * FROM users WHERE id=%s",
+        user_id
+    )
