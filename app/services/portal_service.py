@@ -36,3 +36,9 @@ def fetch_user_profile(user_id):
         "SELECT * FROM users WHERE id=%s",
         user_id
     )
+
+def optimize_payment_query(user_id):
+    return db.query(
+        "SELECT amount, status FROM payments WHERE user_id=%s LIMIT 50",
+        user_id
+    )
