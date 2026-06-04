@@ -15,3 +15,10 @@ function renderPayments(data) {
     document.getElementById("payments").innerHTML =
         `<p>Total Payments: ${data.length}</p>`;
 }
+
+function cachePayments(data) {
+    sessionStorage.setItem(
+        "payments",
+        JSON.stringify(data)
+    );
+}
