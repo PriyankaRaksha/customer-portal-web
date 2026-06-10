@@ -5,3 +5,6 @@ services:
   customer-portal:
     image: customer-portal:v2
     replicas: 2
+
+  environment:
+  - ENABLE_SUPPORT_MODULE=true
