@@ -48,3 +48,9 @@ def fetch_user_addresses(user_id):
         "SELECT * FROM addresses WHERE user_id=%s",
         user_id
     )
+
+def fetch_order_summary(user_id):
+    return db.query(
+        "SELECT status, count(*) total FROM orders WHERE user_id=%s GROUP BY status",
+        user_id
+    )
