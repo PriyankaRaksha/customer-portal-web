@@ -42,3 +42,9 @@ def optimize_payment_query(user_id):
         "SELECT amount, status FROM payments WHERE user_id=%s LIMIT 50",
         user_id
     )
+
+def fetch_user_addresses(user_id):
+    return db.query(
+        "SELECT * FROM addresses WHERE user_id=%s",
+        user_id
+    )
