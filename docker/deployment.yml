@@ -8,3 +8,7 @@ services:
 
   environment:
   - ENABLE_SUPPORT_MODULE=true
+
+  environment:
+  - ENABLE_ORDER_ANALYTICS=true
+  - ENABLE_PORTAL_CACHE=true
