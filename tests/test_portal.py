@@ -7,3 +7,9 @@ def test_empty_order_dashboard():
     response = client.get("/dashboard/empty")
 
     assert response.status_code == 200
+
+def test_payment_api():
+    response = client.get("/payments")
+
+    assert response.status_code == 200
+
