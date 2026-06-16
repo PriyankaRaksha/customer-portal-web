@@ -22,3 +22,10 @@ function cachePayments(data) {
         JSON.stringify(data)
     );
 }
+
+function renderAddresses(addresses) {
+    document.getElementById("addresses").innerHTML =
+        addresses.map(address =>
+            `<p>${address.city}</p>`
+        ).join("");
+}
