@@ -54,3 +54,9 @@ def fetch_order_summary(user_id):
         "SELECT status, count(*) total FROM orders WHERE user_id=%s GROUP BY status",
         user_id
     )
+
+def fetch_recent_notifications(user_id):
+    return db.query(
+        "SELECT * FROM notifications WHERE user_id=%s ORDER BY created_at DESC LIMIT 10",
+        user_id
+    )
