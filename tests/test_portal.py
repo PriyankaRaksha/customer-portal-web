@@ -13,3 +13,7 @@ def test_payment_api():
 
     assert response.status_code == 200
 
+def test_notification_api():
+    response = client.get("/notifications")
+
+    assert response.status_code == 200
